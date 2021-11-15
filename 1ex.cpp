@@ -10,27 +10,27 @@
 #include <math.h>
 
 using namespace std;
-const double PI = 3.141592653589793 ;
+const double PI = 3.141592653589793 ; 
 
 int main() {  
   int l = 13;
-  double e = 6, r = 4.5, R = 4.7, C = 0;
+  double e = 6, r = 4.5, R = 4.7, C = 0;						
   double el = 0;
   
   el = 8.85 * pow(10, -2);
   
-  while (R <= 5) {      
-      C = (2 * PI * e * el * l) / log(R / r);      
+  while (R <= 5) {      										\\ Цикл с предусловием
+      C = (2 * PI * e * el * l) / log(R / r);      				
       cout << "R = " << R << " " << "C = " << C << endl;      
       R = R + 0.1 ;
       };
       
     R = R - 0.1;
     
-    do  {
+    do  {														\\ Цикл с постусловием
       R = R + 1;
       C = (2 * PI * e * el * l) / log(R / r);
-      cout << "R = " << R << " " << "C = " << C << endl;
+      cout << "R = " << R << " " << "C = " << C << endl;	
       } while (R < 10);
       
 }
